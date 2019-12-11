@@ -1,0 +1,32 @@
+{
+  "name": "pr-branch-name",
+  "version": "1.0.0",
+  "description": "Action that gets the branch name for the current pull request",
+  "main": "index.js",
+  "scripts": {
+    "package": "npx ncc build src/main.js -o dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mdecoleman/pr-branch-name.git"
+  },
+  "keywords": [
+    "github",
+    "actions",
+    "pull request",
+    "branch name"
+  ],
+  "bugs": {
+    "url": "https://github.com/mdecoleman/pr-branch-name/issues"
+  },
+  "homepage": "https://github.com/mdecoleman/pr-branch-name#readme",
+  "author": "Matthew Coleman <matthewdecoleman@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "^1.2.0",
+    "@actions/github": "^1.1.0"
+  },
+  "devDependencies": {
+    "@zeit/ncc": "^0.20.5"
+  }
+}
