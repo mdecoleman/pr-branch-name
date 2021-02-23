@@ -5,7 +5,7 @@ A github action that retrieves the pull request branch name and sets it in the o
 # Usage
 
 ```yaml
-- uses: mdecoleman/pr-branch-name@1.0.0
+- uses: mdecoleman/pr-branch-name@1.0.1
   id: vars
   with:
     repo-token: ${{ secrets.GITHUB_TOKEN }}
