@@ -12,7 +12,7 @@ async function run() {
       core.setFailed("Could not get pull request number from context");
     }
 
-    const octokit = new github.GitHub(token);
+    const octokit = new github.getOctokit(token);
 
     const response = await octokit.pulls.get({
       owner: owner,
