@@ -1,4 +1,4 @@
-name: "PR Branch Name"
+name: "Get PR Branch Name"
 description: "Sets the PR Branch Name for other steps"
 inputs:
   repo-token:
