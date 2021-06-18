@@ -5,7 +5,7 @@ async function run() {
   try {
     const token = core.getInput("repo-token");
     const { owner, repo } = github.context.repo;
-
+    
     const prNumber = getPrNumber();
 
     if (!prNumber) {
