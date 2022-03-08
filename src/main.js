@@ -1,5 +1,6 @@
 const core = require("@actions/core");
 const github = require("@actions/github");
+const { GitHub } = require("@actions/github/lib/utils");
 
 async function run() {
   try {
@@ -12,7 +13,7 @@ async function run() {
       core.setFailed("Could not get pull request number from context");
     }
 
-    const octokit = new github.GitHub(token);
+    const octokit = new GitHub(token);
 
     const response = await octokit.pulls.get({
       owner: owner,
