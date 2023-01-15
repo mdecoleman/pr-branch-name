@@ -1,23 +1,23 @@
-name: Build dist on push to master
-on:
-  push:
-    branches:
-      - master
+# name: Build dist on push to master
+# on:
+#   push:
+#     branches:
+#       - master
 
-jobs:
-  build-and-commit:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
-      - name: build
-        run: |
-          npm ci
-          npm run package
-      - name: Commit build
-        run: |
-          git config --global user.name 'github-actions[bot]'
-          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git add -A
-          git commit -m 'Automated: built dist package'
-          git push
+# jobs:
+#   build-and-commit:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@v2
+#       - uses: actions/setup-node@v2
+#       - name: build
+#         run: |
+#           npm ci
+#           npm run package
+#       - name: Commit build
+#         run: |
+#           git config --global user.name 'github-actions[bot]'
+#           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+#           git add -A
+#           git commit -m 'Automated: built dist package'
+#           git push
