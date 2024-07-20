@@ -25,16 +25,16 @@
     ".": "./dist/index.js"
   },
   "scripts": {
-    "bundle": "npm run format:write && npm run package",
-    "ci-test": "npx jest",
-    "coverage": "npx make-coverage-badge --output-path ./badges/coverage.svg",
-    "format:write": "npx prettier --write .",
-    "format:check": "npx prettier --check .",
-    "lint": "npx eslint . -c ./.github/linters/.eslintrc.yml",
-    "package": "npx ncc build src/index.ts -o dist --source-map --license licenses.txt",
-    "package:watch": "npm run package -- --watch",
-    "test": "npx jest --passWithNoTests",
-    "all": "npm run format:write && npm run lint && npm run test && npm run coverage && npm run package"
+    "bundle": "pnpm format:write && npm run package",
+    "ci-test": "pnpm jest",
+    "coverage": "pnpm make-coverage-badge --output-path ./badges/coverage.svg",
+    "format:write": "pnpm prettier --write .",
+    "format:check": "pnpm prettier --check .",
+    "lint": "pnpm eslint . -c ./.github/linters/.eslintrc.yml",
+    "package": "pnpm ncc build src/index.ts -o dist --source-map --license licenses.txt",
+    "package:watch": "pnpm package -- --watch",
+    "test": "pnpm jest --passWithNoTests",
+    "all": "pnpm format:write && npm run lint && npm run test && npm run coverage && npm run package"
   },
   "license": "MIT",
   "jest": {
