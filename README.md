@@ -1,6 +1,13 @@
 # Pull Request Branch Name
 
-A github action that retrieves the pull request branch name and sets it in the output for other actions to use.
+[![GitHub Super-Linter](https://github.com/mdecoleman/pr-branch-name/actions/workflows/linter.yml/badge.svg)](https://github.com/super-linter/super-linter)
+![CI](https://github.com/mdecoleman/pr-branch-name/actions/workflows/ci.yml/badge.svg)
+[![Check dist/](https://github.com/mdecoleman/pr-branch-name/actions/workflows/check-dist.yml/badge.svg)](https://github.com/mdecoleman/pr-branch-name/actions/workflows/check-dist.yml)
+[![CodeQL](https://github.com/mdecoleman/pr-branch-name/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/mdecoleman/pr-branch-name/actions/workflows/codeql-analysis.yml)
+[![Coverage](./badges/coverage.svg)](./badges/coverage.svg)
+
+A github action that retrieves the pull request branch name and sets it in the
+output for other actions to use.
 
 # Usage
 
@@ -14,4 +21,5 @@ A github action that retrieves the pull request branch name and sets it in the o
 
 # License
 
-The scripts and documentation in this project are released under the [MIT License](LICENSE)
+The scripts and documentation in this project are released under the
+[MIT License](LICENSE)
