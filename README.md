@@ -12,7 +12,7 @@ output for other actions to use.
 # Usage
 
 ```yaml
-- uses: mdecoleman/pr-branch-namev3.0.0
+- uses: mdecoleman/pr-branch-name@v3.0.0
   id: vars
   with:
     repo-token: ${{ secrets.GITHUB_TOKEN }}
