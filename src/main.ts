@@ -34,7 +34,7 @@ export async function run(): Promise<void> {
     core.setOutput('branch', response.data.head.ref)
   } catch (error) {
     if (error instanceof Error) {
-      core.setFailed(error.message)
+      core.setFailed(error)
     }
   }
 }
