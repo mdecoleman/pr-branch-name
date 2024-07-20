@@ -25,7 +25,7 @@
     ".": "./dist/index.js"
   },
   "scripts": {
-    "bundle": "pnpm format:write && npm run package",
+    "bundle": "pnpm format:write && pnpm package",
     "ci-test": "pnpm jest",
     "coverage": "pnpm make-coverage-badge --output-path ./badges/coverage.svg",
     "format:write": "pnpm prettier --write .",
@@ -34,7 +34,7 @@
     "package": "pnpm ncc build src/index.ts -o dist --source-map --license licenses.txt",
     "package:watch": "pnpm package -- --watch",
     "test": "pnpm jest --passWithNoTests",
-    "all": "pnpm format:write && npm run lint && npm run test && npm run coverage && npm run package"
+    "all": "pnpm format:write && pnpm run lint && pnpm run test && pnpm run coverage && pnpm run package"
   },
   "license": "MIT",
   "jest": {
