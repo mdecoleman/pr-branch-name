@@ -29226,7 +29226,7 @@ async function run() {
     }
     catch (error) {
         if (error instanceof Error) {
-            core_1.default.setFailed(error.message);
+            core_1.default.setFailed(error);
         }
     }
 }
