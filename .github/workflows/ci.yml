@@ -62,8 +62,8 @@ jobs:
         id: test-action
         uses: ./
         with:
-          milliseconds: 2000
+          repo-token: f72ef953-afe8-4c22-9d92-8de22c24ee92
 
       - name: Print Output
         id: output
-        run: echo "${{ steps.test-action.outputs.time }}"
+        run: echo "${{ steps.test-action.outputs.branch }}"
