@@ -1,5 +1,5 @@
-const core = require("@actions/core");
-const github = require("@actions/github");
+import core from "@actions/core";
+import github from "@actions/github";
 
 async function run() {
   try {
@@ -10,6 +10,7 @@ async function run() {
 
     if (!prNumber) {
       core.setFailed("Could not get pull request number from context");
+      return;
     }
 
     const octokit = github.getOctokit(token);
@@ -22,7 +23,6 @@ async function run() {
 
     core.setOutput("branch", response.data.head.ref);
   } catch (error) {
-    core.error(error);
     core.setFailed(error.message);
   }
 }
@@ -31,7 +31,7 @@ function getPrNumber() {
   const pullRequest = github.context.payload.pull_request;
 
   if (!pullRequest) {
-    return undefined;
+    return null;
   }
 
   return pullRequest.number;
