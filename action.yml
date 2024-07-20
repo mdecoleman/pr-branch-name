@@ -1,12 +1,12 @@
-name: "PR Branch Name"
-description: "Sets the PR Branch Name for other steps"
+name: 'PR Branch Name'
+description: 'Sets the PR Branch Name for other steps'
 inputs:
   repo-token:
-    description: "GITHUB_TOKEN secret"
+    description: 'GITHUB_TOKEN secret'
     required: true
 runs:
-  using: "node20"
-  main: "dist/index.js"
+  using: 'node20'
+  main: 'dist/index.js'
 branding:
-  icon: "git-branch"
-  color: "gray-dark"
+  icon: 'git-branch'
+  color: 'gray-dark'

@@ -1,7 +1,7 @@
 import core from '@actions/core'
 import github from '@actions/github'
 
-function getPrNumber() {
+function getPrNumber(): number | null {
   const pullRequest = github.context.payload.pull_request
 
   if (!pullRequest) {
@@ -16,9 +16,9 @@ export async function run(): Promise<void> {
     const token = core.getInput('repo-token')
     const { owner, repo } = github.context.repo
 
-    const prNumber = getPrNumber()
+    const pull_number = getPrNumber()
 
-    if (!prNumber) {
+    if (!pull_number) {
       core.setFailed('Could not get pull request number from context')
       return
     }
@@ -26,9 +26,9 @@ export async function run(): Promise<void> {
     const octokit = github.getOctokit(token)
 
     const response = await octokit.rest.pulls.get({
-      owner: owner,
-      repo: repo,
-      pull_number: prNumber
+      owner,
+      repo,
+      pull_number
     })
 
     core.setOutput('branch', response.data.head.ref)
