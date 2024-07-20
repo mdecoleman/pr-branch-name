@@ -29,7 +29,12 @@ jobs:
       - name: Checkout
         id: checkout
         uses: actions/checkout@v4
-
+        
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+          
       - name: Setup Node.js
         id: setup-node
         uses: actions/setup-node@v4
