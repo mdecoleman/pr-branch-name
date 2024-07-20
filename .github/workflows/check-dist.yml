@@ -35,15 +35,15 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version-file: .node-version
-          cache: npm
+          cache: pnpm
 
       - name: Install Dependencies
         id: install
-        run: npm ci
+        run: pnpm install
 
       - name: Build dist/ Directory
         id: build
-        run: npm run bundle
+        run: pnpm bundle
 
       # This will fail the workflow if the `dist/` directory is different than
       # expected.
